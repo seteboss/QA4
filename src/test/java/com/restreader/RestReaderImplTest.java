@@ -23,12 +23,6 @@ public class RestReaderImplTest {
 
     private RestReader restReader;
 
-    @BeforeClass
-    public static void globalSetUp() {
-        HttpsURLConnection.setDefaultSSLSocketFactory(new KeyStoreFactory(new MockServerLogger()).sslContext().getSocketFactory());
-        mockServer = startClientAndServer(1080);
-
-    }
 
     @Test
     public void testGettingJsonString() {
